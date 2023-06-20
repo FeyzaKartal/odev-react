@@ -1,30 +1,26 @@
+
 import axios from "axios";
 
-const getUsers = (userId) => { 
-    return new Promise(async (resolve, reject) => { 
-        
-        const { data } = await axios("https://jsonplaceholder.typicode.com/users/"+ userId); 
-            resolve(data);      
-    });
-  };
-  
-  const getPost = (userId) => {
-    return new Promise(async (resolve, reject) => { 
-        
-        const { data } = await axios("https://jsonplaceholder.typicode.com/posts?id=" + userId); 
-            resolve(data);      
-    });
-  };
-  
-  async function getData(userId) {
-    try {
-        const users = await getUsers(userId); 
-        const posts = await getPost(userId); 
+const getUsers=async(Number)=>{
+    const {data:users}=await(axios("https://jsonplaceholder.typicode.com/users/"+Number));
+    console.log(users);
+    };
+    
+const getPost=async(Number)=>{
+    const {data:post}=await(axios("https://jsonplaceholder.typicode.com/posts?id=" + Number));
+    console.log(post);
+    };
+    
 
-        const array = [users, posts] 
-      } catch (e) {
-        console.log(e); 
-  }}
-  
-  
-  export default getData; 
+async function getData(Number){
+   try{
+    const users= await getUsers(Number);
+    const post=await getPost(Number);
+    return users+post;
+   }
+  catch(error){
+    return error;
+  }
+}
+
+export default getData
