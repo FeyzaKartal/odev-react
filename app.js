@@ -27,4 +27,4 @@ const getUsers = (userId) => {
   }}
   
   
-  export default getData; // default olarak export ediyoruz.
+  export default getData; 
