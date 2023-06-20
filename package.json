@@ -1,0 +1,22 @@
+{
+  "name": "odev-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeyzaKartal/odev-react.git"
+  },
+  "author": "Feyza Kucukkaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeyzaKartal/odev-react/issues"
+  },
+  "homepage": "https://github.com/FeyzaKartal/odev-react#readme",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
+}
